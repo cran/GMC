@@ -1,0 +1,73 @@
+---
+title: "Introduction to GMC Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to GMC Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(GMC)
+```
+
+## Introduction
+
+The GMC package provides tools to compute the Generalized Measure of Correlation (GMC), a dependence measure that accounts for nonlinearity and asymmetry in the relationship between variables. This measure was proposed by Zheng, Shi, and Zhang (2012).
+
+## Basic Usage
+
+### Computing GMC(Y|X)
+
+```{r}
+# Generate sample data with linear relationship
+set.seed(123)
+n <- 1000
+X <- rnorm(n)
+Y <- 2 * X + rnorm(n, sd = 0.5)
+
+# Calculate GMC(Y|X)
+gmc_y_given_x <- GMC_Y_given_X(X, Y)
+print(paste("GMC(Y|X) =", round(gmc_y_given_x, 3)))
+```
+
+### Computing GMC(X|Y)
+
+```{r}
+# Generate sample data with nonlinear relationship
+set.seed(123)
+X <- rnorm(n)
+Y <- X^2 + rnorm(n, sd = 0.5)
+
+# Calculate GMC(X|Y)
+gmc_x_given_y <- GMC_X_given_Y(X, Y)
+print(paste("GMC(X|Y) =", round(gmc_x_given_y, 3)))
+```
+
+### Feature Ranking
+
+```{r}
+# Generate sample data with multiple predictors
+set.seed(123)
+n <- 500
+X1 <- rnorm(n)
+X2 <- rnorm(n)
+X3 <- rnorm(n)
+Y <- 2 * X1 + X2^2 + rnorm(n, sd = 0.5)
+X <- cbind(X1, X2, X3)
+
+# Rank features by GMC
+ranking <- GMC_feature_ranking(X, Y)
+print(ranking)
+```
+
+## References
+
+Zheng, S., Shi, N.Z., & Zhang, Z. (2012). Generalized Measures of Correlation for Asymmetry, Nonlinearity, and Beyond. Journal of the American Statistical Association, 107(499), 1239-1252.

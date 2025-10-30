@@ -1,0 +1,15 @@
+b5a2629dc66aa2e0cc46f027d01a505c *DESCRIPTION
+5e8c5e3cc3756aa1337335a93a42af21 *NAMESPACE
+87c6b88de819876139526f94b907bc9e *R/gmc.R
+b54db8794555342c4feee5fe0b1b8f5b *build/partial.rdb
+759d554c236fcc518fd32194d9eb750a *build/vignette.rds
+c91f970512b0561ce0bbcde252b9e29c *inst/doc/GMC-introduction.R
+5f4c66a1f702c3e47ffeac7cf296374b *inst/doc/GMC-introduction.Rmd
+d6558c904181890b95970b7004be6f1e *inst/doc/GMC-introduction.html
+866665761eb11a4d05ce2486e15c758a *man/GMC_X_given_Y.Rd
+c4974378f9a649377670f5690c952cbd *man/GMC_Y_given_X.Rd
+dc5ee7b6def12ca7a55d2de05660fdcf *man/GMC_feature_ranking.Rd
+116311f4f290dcc386e6182ec4508d1d *man/estimate_EY_X_squared.Rd
+9c6d4ef03af91dda3e78d0565516998d *tests/testthat.R
+074b8059ee3bc85e960f5aee1474a4e1 *tests/testthat/test-gmc.R
+5f4c66a1f702c3e47ffeac7cf296374b *vignettes/GMC-introduction.Rmd
