@@ -1,7 +1,7 @@
 Package: GMC
 Type: Package
 Title: Generalized Measure of Correlation (GMC)
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Xuejing", "Ding", email = "dingxuejing24@mails.ucas.ac.cn", 
            role = c("aut", "cre")),
@@ -10,7 +10,7 @@ Authors@R: c(
 Description: 
   Provides tools to compute the Generalized Measure of Correlation (GMC), 
   a dependence measure accounting for nonlinearity and asymmetry in the relationship 
-  between variables. Based on the method proposed by Zheng, Shi, and Zhang (2012).
+  between variables. Based on the method proposed by Zheng, Shi, and Zhang (2012) <doi:10.1080/01621459.2012.710509>.
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.3.2
@@ -19,9 +19,9 @@ Config/testthat/edition: 3
 Imports: ks, stats
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-10-27 08:45:18 UTC; ding'x'j
+Packaged: 2025-10-31 01:40:15 UTC; ding'x'j
 Author: Xuejing Ding [aut, cre],
   Zhengjun Zhang [aut]
 Maintainer: Xuejing Ding <dingxuejing24@mails.ucas.ac.cn>
 Repository: CRAN
-Date/Publication: 2025-10-30 20:00:09 UTC
+Date/Publication: 2025-10-31 12:10:02 UTC
